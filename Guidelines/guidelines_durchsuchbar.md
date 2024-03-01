@@ -1,24 +1,24 @@
 # Einführung
 Der Annotationsguide beschäftigt sich damit, Informationen zu Skills, Tasks, Berufen und Branchen in Stellenanzeigen zu finden. Hierfür markieren wir sogenannte *Entitäten* im Text der Stellenanzeigen und ziehen *Relationen* zwischen ihnen, um beispielsweise zu verstehen, mit welchem Arbeitsmittel ein bestimmter Arbeitsprozess ausgeführt wird. 
 
-Unser zentrales Interesse ist die ausgeschriebene Position bzw. die dafür gesuchten Bewerber*innen. Eigenschaften, die sich bspw. auf das Unternehmen oder Arbeitsinhalte beziehen, sind nicht zu annotieren. Eine Ausnahme hiervon stellt die Enität Branche dar, die sich explizit auf das Unternehmen bezieht.
+Unser zentrales Interesse ist die ausgeschriebene Position bzw. die dafür gesuchten Bewerber*innen. Eigenschaften, die sich bspw. auf das Unternehmen oder Arbeitsinhalte beziehen, sind nicht zu annotieren. Eine Ausnahme hiervon stellt die Entität Branche dar, die sich explizit auf das Unternehmen bezieht.
 <div style="text-align:center;">
   <img src="./images/alg_bezug_zur_stelle.GIF" style="height:150px;">
   <p style="color:white;">Sie sind dynamisch. Wir sind ein dynamisches Startup. Sie sind selbstständig. Sie sichern eine selbstständige Lebensweise der Bewohner.</p>
 </div><br>
 
-Die hier dargestellten Entitäten und Relation werden weiter unten ausführlicher behandelt. Die Beispiele sollen nur ein Grundverständis unseres Vorgehens vermitteln. Im ersten Beispielsatz bezieht sich *dynamisch* auf eine Charaktereigenschaft, die eine potentielle Bewerberin mitbringen soll. Dagegen bezieht sich dynamsich im zweiten Satz auf da Unternehmen, weshalb wir dynamisch in diesem Beispiel nicht annotieren. 
+Die hier dargestellten Entitäten und Relation werden weiter unten ausführlicher behandelt. Die Beispiele sollen nur ein Grundverständnis unseres Vorgehens vermitteln. Im ersten Beispielsatz bezieht sich *dynamisch* auf eine Charaktereigenschaft, die eine potenzielle Bewerberin mitbringen soll. Dagegen bezieht sich dynamisch im zweiten Satz auf das Unternehmen, weshalb wir dynamisch in diesem Beispiel nicht annotieren. 
 
-Das letzte Beispiel gibt einen Überblick, wie Entitäten mit Relationen verbunden sein können. Dazu wurden recht kleinteilig unterschiedliche Textteile markiert und miteinander verbunden, mit dem Ziel gleiche oder ähnliche Informationen aus unterschiedlichen Stellenanzeigen im Anschluss leichter in Verbindung zu bringen. Die Aufgabe eines potentiellen Bewerbers in dem Beispiel ist es, eine selbstständige Lebensweise einer bestimmten Personengruppe zu sichern -der Bewohner. In einer anderen Stellenanzeige könnte beispielsweise die Sicherung der selbstständigen Lebensweise von Patienten gefordert sein. Die kleinteilige Markierung von Textstellen und deren Relation erlaubt es uns zu verstehen, dass es in beiden Fällen um die Sicheurng der selbstständigen Lebensweise geht und lediglich Unterschiede in der Personengruppe bestehen.  
+Das letzte Beispiel gibt einen Überblick, wie Entitäten mit Relationen verbunden sein können. Dazu wurden recht kleinteilig unterschiedliche Textteile markiert und miteinander verbunden, mit dem Ziel gleiche oder ähnliche Informationen aus unterschiedlichen Stellenanzeigen im Anschluss leichter in Verbindung zu bringen. Die Aufgabe eines potenziellen Bewerbers in dem Beispiel ist es, eine selbstständige Lebensweise einer bestimmten Personengruppe zu sichern -der Bewohner. In einer anderen Stellenanzeige könnte beispielsweise die Sicherung der selbstständigen Lebensweise von Patienten gefordert sein. Die kleinteilige Markierung von Textstellen und deren Relation erlaubt es uns zu verstehen, dass es in beiden Fällen um die Sicherung der selbstständigen Lebensweise geht und lediglich Unterschiede in der Personengruppe bestehen.  
 
-# Hintergrundwissen zur Konzeptionalisierung  
+# Hintergrundwissen zur Konzeptualisierung   
 
-In Stellenanzeigen sind Tasks und Skills eng verwandt und können häufig als zwei Seiten einer Medaille verstanden werden (siehe auch Rodrigues et al. 2021). Von Tasks kann man auf Skills schließen, umgekehrt aber nicht. Zum Beispiel wird eine Task zum Skill, wenn man "Sie können" davorsetzt. 
+In Stellenanzeigen sind Tasks und Skills eng verwandt und können häufig als zwei Seiten einer Medaille verstanden werden (siehe auch Rodrigues et al. [2021](https://www.econstor.eu/bitstream/10419/231348/1/jrc-wplet202102.pdf)). Von Tasks kann man auf Skills schließen, umgekehrt aber nicht. Zum Beispiel wird eine Task zum Skill, wenn man "Sie können" davorsetzt. 
 
 
 ## Tasks
-Die Extraktion von Tasks ist eines unserer zentralen Auswertungziele. Allerdings werden diese *nicht direkt* im Text markiert, sondern bestehen normalerweise aus einem **Prozess** und einem **Arbeitsinhalt**[^1]. 
-Technisch gesehen sind tasks diskrete Einheiten von Arbeit, also Arbeitsaufgaben, die im Rahmen wirtschaftlicher Aktivität Inputs in Outputs transformieren (Autor [2013](https://labourmarketresearch.springeropen.com/articles/10.1007/s12651-013-0128-z), Rodrigues et al. [2021](https://www.econstor.eu/bitstream/10419/231348/1/jrc-wplet202102.pdf)). Tasks können unterschiedliche Granularitäten aufweisen, die unter anderem von der Komplexität und der Organisation von Arbeit abhängen (Rodrigues et al. 2021: 6). Tasks können nach ihrem Inhalt (WAS?), den Aufgaben zugrundeliegende Methoden (WIE?), und Arbeitsmittel (WOMIT?) klassifiziert werden (z.B.: Fana et al. [2023](https://oa.inapp.org/xmlui/handle/20.500.12916/4058)). Die Arbeitsnachfrage am Arbeitsmarkt richtet sich selten auf einzelne tasks, sondern auf Berufe, die tasks kohärent bündeln (Fernández-Macías, Bisello, [2022](https://doi.org/10.1007/s11205-021-02768-7)).
+Die Extraktion von Tasks ist eines unserer zentralen Auswertungsziele. Allerdings werden diese *nicht direkt* im Text markiert, sondern bestehen normalerweise aus einem **Prozess** und einem **Arbeitsinhalt**[^1]. 
+Technisch gesehen sind Tasks diskrete Einheiten von Arbeit, also Arbeitsaufgaben, die im Rahmen wirtschaftlicher Aktivität Inputs in Outputs transformieren (Autor [2013](https://labourmarketresearch.springeropen.com/articles/10.1007/s12651-013-0128-z), Rodrigues et al. [2021](https://www.econstor.eu/bitstream/10419/231348/1/jrc-wplet202102.pdf)). Tasks können unterschiedliche Granularitäten aufweisen, die unter anderem von der Komplexität und der Organisation von Arbeit abhängen (Rodrigues et al. 2021: 6). Tasks können nach ihrem Inhalt (WAS?), den Aufgaben zugrundeliegende Methoden (WIE?), und Arbeitsmittel (WOMIT?) klassifiziert werden (z.B.: Fana et al. [2023](https://oa.inapp.org/xmlui/handle/20.500.12916/4058)). Die Arbeitsnachfrage am Arbeitsmarkt richtet sich selten auf einzelne Tasks, sondern auf Berufe, die Tasks kohärent bündeln (Fernández-Macías, Bisello, [2022](https://doi.org/10.1007/s11205-021-02768-7)).
 
 <div style="text-align:center;">
   <img src="./images/ent_prozess_02.png" style="height:50px;">
@@ -44,7 +44,7 @@ Dementsprechend kann ein Skill beispielsweise durch die Kombination eines **Erfa
 
 Der **Prozess** *Programmieren* und der **Arbeitsinhalt** *Python* bilden einen Task. In Kombination mit dem **Erfahrungsniveau** *Erfahrung* wird daraus ein Skill, nämlich die Fähigkeit in Python programmieren zu können.
 
-[^2]: Die Entität **Erfahrungsnieau** wird weiter unten ausführlicher beschrieben
+[^2]: Die Entität **Erfahrungsniveau** wird weiter unten ausführlicher beschrieben
 
 
 # Entitätstypen
@@ -123,7 +123,7 @@ Ein **Prozess** beschreibt die zu verrichtende Handlung oder Abfolge von Schritt
 
 </ul></ul>
 
-- Prozessverben können in machen Fällen durch abgetrennte Präfixe auf mehrere Wörter verteilt sein. In diesen Fällen werden alle Wörter als Prozess markiert und entsprechend über die Relation **zusammengehörige Entitätsteile** verbunden.
+- Prozessverben können in manchen Fällen durch abgetrennte Präfixe auf mehrere Wörter verteilt sein. In diesen Fällen werden alle Wörter als Prozess markiert und entsprechend über die Relation **zusammengehörige Entitätsteile** verbunden.
 
 <div style="text-align:center;">
   <img src="./images/zet_mithelfen.png" style="height:75px;">
@@ -142,13 +142,13 @@ Ein **Prozess** beschreibt die zu verrichtende Handlung oder Abfolge von Schritt
   <p style="color:white;">Zu ihren Aufgaben zählen administrative Tätigkeiten.</p>
 </div><br>
 
-- Wenn Prozesse wie bei [task](#task) beschrieben ohne Arbeitsinhalt vorkommen, stehen sie häufig alleine oder in Verbindung mit einem Attribut 
+- Wenn Prozesse wie bei [Task](#task) beschrieben ohne Arbeitsinhalt vorkommen, stehen sie häufig alleine oder in Verbindung mit einem Attribut 
 <div style="text-align:center;">
   <img src="./images/ausgangslagerung.png" style="height:50px;">
   <p style="color:white;">Ausgangslagerung</p>
 </div><br>
 
-- **Ansprechpartner** wird im nachfolgenden Beispiel als Prozess annotiert, da sich **Ansprechpartner sein** in gängige Taskdimensionen einordnen lässt.Gleiches gilt beispielsweise auch für Vorstandstätigkeit.
+- **Ansprechpartner** wird im nachfolgenden Beispiel als Prozess annotiert, da sich **Ansprechpartner sein** in gängige Taskdimensionen einordnen lässt. Gleiches gilt beispielsweise auch für Vorstandstätigkeit.
 <div style="text-align:center;">
   <img src="./images/Ansprechpartner_Neukunden.PNG" style="height:50px;">
   <p style="color:white;">Sie sind Ansprechpartner für Neukunden</p>
@@ -167,7 +167,7 @@ Ein **Prozess** beschreibt die zu verrichtende Handlung oder Abfolge von Schritt
 
 
 ## Arbeitsinhalt
-Ein **Arbeitsinhalt** beschreibt alle weiteren Entitäten, die neben dem **Prozess** erforderlicher Teil einer **Task** sind, um diese ausreichend konkret von anderen tasks abgrenzen zu können. Dabei werden über den **Arbeitsinhalt** zwei Dimensionen von **tasks** abgebildet: _Womit wird gearbeitet?_ und _an was oder mit wem wird gearbeitet_? Ein Arbeitsinhalt kann einerseits ein Arbeitsmittel (*womit*) und andererseits ein (immaterieller) Gegenstand bzw. eine Person(engruppe) sein, der/die "bearbeitet" wird (*"an was" oder "mit bzw. an wem" wird gearbeitet*). 
+Ein **Arbeitsinhalt** beschreibt alle weiteren Entitäten, die neben dem **Prozess** erforderlicher Teil einer **Task** sind, um diese ausreichend konkret von anderen Tasks abgrenzen zu können. Dabei werden über den **Arbeitsinhalt** zwei Dimensionen von **Tasks** abgebildet: _Womit wird gearbeitet?_ und _an was oder mit wem wird gearbeitet_? Ein Arbeitsinhalt kann einerseits ein Arbeitsmittel (*womit*) und andererseits ein (immaterieller) Gegenstand bzw. eine Person(engruppe) sein, der/die "bearbeitet" wird (*"an was" oder "mit bzw. an wem" wird gearbeitet*). 
 
 <div style="text-align:center;">
   <img src="./images/ent_arbeitsinhalt_02.gif" style="height:50px;">
@@ -265,8 +265,8 @@ Ein **Attribut** spezifiziert eine andere Entität näher.
 </div>
 
 
-- Ein Attribut kann nicht alleine stehen.
-- Eine Entität ist nur ein Attribut, wenn die entsprechende andere Entität alleine für sich stehen kann. Im Beispiel stellt "naturwissenschaftliches Studium" für sich eine formale Anforderung dar. _Abgeschlossenes_ und _wünschenswert_ beschreiben die Art der Qualifikation nur noch detaillierter. 
+- Ein Attribut kann nicht alleinstehen.
+- Eine Entität ist nur ein Attribut, wenn die entsprechende andere Entität allein für sich stehen kann. Im Beispiel stellt "naturwissenschaftliches Studium" für sich eine formale Anforderung dar. _Abgeschlossenes_ und _wünschenswert_ beschreiben die Art der Qualifikation nur noch detaillierter. 
 <div style="text-align:center;">
   <img src="./images/ent_attribut_03.png" style="height:50px;">
   <p style="color:white;">Abgeschlossenes naturwissenschaftliches Studium wünschenswert</p>
@@ -301,7 +301,7 @@ Das **Erfahrungsniveau** gibt an, welche Art von Erfahrung ein potenzieller Arbe
 </div>
 
 
-- Das Erfahrungsniveau kann sich auf den Job als ganzes oder einzelne tasks beziehen 
+- Das Erfahrungsniveau kann sich auf den Job als Ganzes oder einzelne Tasks beziehen 
 <div style="text-align:center;">
   <img src="./images/berufserfahrung.png" style="height:50px;">
   <p style="color:white;">Berufserfahrung</p>
@@ -389,7 +389,7 @@ Eine **Attitüde** bezieht sich auf die geistige Ausrichtung, Haltung, Einstellu
   <p style="color:white;">Ihre Aufgaben: Bereitschaftsdienst</p>
 </div>
 
-- Verständnis drückt oft eine Attitüde aus, wobei das Adjektiv essentiell ist, um die Attitüde klassifizieren zu können. Es wird daher nicht als Attribut verstanden, sondern als Teil der Attitüde mitannotiert.  
+- Verständnis drückt oft eine Attitüde aus, wobei das Adjektiv essenziell ist, um die Attitüde klassifizieren zu können. Es wird daher nicht als Attribut verstanden, sondern als Teil der Attitüde mitannotiert.  
 
 <div style="text-align:center;">
   <img src="./images/technisches_verstaendnis.png" style="height:80px;">
@@ -411,7 +411,7 @@ Eine **Berufsbezeichnung** benennt einen Beruf. Wir nutzen den Entitätstyp sowo
 
 
 - Es sollen keine Quantifizier annotiert werden, die ausdrücken, wie viele Personen gesucht werden, also nur _Maurer_ und nicht _einen Maurer_.
-- Die Zeichenkette von Berufsbezeichnungen soll so kurz wie möglich gehalten werden. Bei genderneutralen formulierungen wird immer die kürzeste Variante annotiert, also nur _Maurer_ in der Zeichenkette _Maurer/in_, bzw. _Angestellte_ in _Angestellte/r_.
+- Die Zeichenkette von Berufsbezeichnungen soll so kurz wie möglich gehalten werden. Bei genderneutralen Formulierungen wird immer die kürzeste Variante annotiert, also nur _Maurer_ in der Zeichenkette _Maurer/in_, bzw. _Angestellte_ in _Angestellte/r_.
 <div style="text-align:center;">
   <img src="./images/ent_berufsbezeichnung_02.gif" style="height:50px;">
   <p style="color:white;">Wir suchen eine/n Maurer/in (m/w/d)</p>
@@ -474,7 +474,7 @@ Häufig findet sich diese Information in der Unternehmensbeschreibung.
   <p style="color:white;">Sie arbeiten in einem Foodtruck auf Festivals und Stadtfesten.</p>
 </div><br>
 
-- Abweichend vom sonsitgen Vorgehen, wird die Entität **Branche** immer für ein ganzes Wort markiert, auch wenn ein Wortteil schon reichen würde, um die Branche zu identifizieren. Dies soll die Annotationsarbeit erleichtern.
+- Abweichend vom sonstigen Vorgehen, wird die Entität **Branche** immer für ein ganzes Wort markiert, auch wenn ein Wortteil schon reichen würde, um die Branche zu identifizieren. Dies soll die Annotationsarbeit erleichtern.
 <div style="text-align:center;">
   <img src="./images/ent_branche_05.png" style="height:100px;">
   <p style="color:white;">In unserem Logistikunternehmen bist du zuständig für ... Wir sind ein Unternehmen in der Logistikbranche und suchen Speditionskaufleute</p>
@@ -534,7 +534,7 @@ Eine **formale Qualifikation** wird normalerweise von einer Institution wie eine
 
 ## Task
 
-- Es gibt Fälle, bei denen tasks formuliert sind, diese sich aber nicht in Prozess und Arbeitsinhalt aufteilen lassen. In solchen Fällen können Prozesse/Arbeitsinhalte auch alleine stehen bzw. mit der Nullrelation an andere Entitäten gekoppelt sein. Arbeitsinhalt ist hierbei oft so eine Art Kompetenzbereich. Um in solchen Fällen AI von Prozessen abzugrenzen, greift hier die Faustregel: Kann ich die Span als task weiter inhaltlich klassifizieren (z.B.: physische/manuelle, intellektuelle/kognitive, soziale task)? Ist dies der Fall, liegt ein Prozess vor analog zum Vorgehen bei inhaltslosen [Prozessen](#Prozess). Ist dies nicht der Fall, liegt ein AI vor. In den Beispielen unten z.B. lässt sich "Bädertechnik" nicht weiter klassifizieren, da nicht klar ist, ob manuelle oder kognitive oder sonstige tasks hiermit verbunden werden. *Lagerung* und *Reinigung* deuten jedoch auf Prozesse hin.
+- Es gibt Fälle, bei denen Tasks formuliert sind, diese sich aber nicht in Prozess und Arbeitsinhalt aufteilen lassen. In solchen Fällen können Prozesse/Arbeitsinhalte auch alleinstehen bzw. mit der Nullrelation an andere Entitäten gekoppelt sein. Arbeitsinhalt ist hierbei oft so eine Art Kompetenzbereich. Um in solchen Fällen AI von Prozessen abzugrenzen, greift hier die Faustregel: Kann ich die Span als Task weiter inhaltlich klassifizieren (z.B.: physische/manuelle, intellektuelle/kognitive, soziale Task)? Ist dies der Fall, liegt ein Prozess vor analog zum Vorgehen bei inhaltslosen [Prozessen](#Prozess). Ist dies nicht der Fall, liegt ein AI vor. In den Beispielen unten z.B. lässt sich "Bädertechnik" nicht weiter klassifizieren, da nicht klar ist, ob manuelle oder kognitive oder sonstige Tasks hiermit verbunden werden. *Lagerung* und *Reinigung* deuten jedoch auf Prozesse hin.
 <div style="text-align:center;">
   <img src="./images/baedertechnik.png" style="height:50px;">
   <p style="color:white;">Bädertechnik</p>
@@ -713,7 +713,7 @@ Die **Oder** Relation wird zwischen Entitäten gezogen, die als Alternativen in 
 </div>
 <br>
 
-- Die Relation **oder** wird nur dann gezogen, wenn explizit ableitet werden kann, dass es sich um Alternativen handelt z.B. durch die Verwendung des Wortes **oder** oder **bzw.**. Bei anderen Arten der Auflistung z.B. durch **/** oder **,** getrennt, werden die Enitäten nur einzelnd annotiert und keine **oder-Relation** gezogen, da nicht ausgeschlossen werden, kann dass es sich um eine *und*-Verkettung der Entitäten handeln könnte. 
+- Die Relation **oder** wird nur dann gezogen, wenn explizit ableitet werden kann, dass es sich um Alternativen handelt, z.B. durch die Verwendung des Wortes **oder** oder **bzw.**. Bei anderen Arten der Auflistung z.B. durch **/** oder **,** getrennt, werden die Entitäten nur einzeln annotiert und keine **oder-Relation** gezogen, da nicht ausgeschlossen werden, kann dass es sich um eine *und*-Verkettung der Entitäten handeln könnte. 
 <div style="text-align:center;">
   <img src="./images/i59_1.PNG" style="height:50px">
   <p style="color:white;">Maurer/Betonbauer/Bauhelfer gesucht</p>
@@ -812,7 +812,7 @@ Die Wörter müssen dabei zusammen kein eigenständiges Wort bilden. Es geht ehe
 
 
 ### Koordination
-Diese Relation wird verwendet, wenn durch (Morphem-)koordination der Teil eines Wortes weggelassen wird. 
+Diese Relation wird verwendet, wenn durch (Morphem-)Koordination der Teil eines Wortes weggelassen wird. 
   
 <div style="text-align:center;">
   <img src="./images/rel_koordination_01.GIF" style="height:50px;">
@@ -825,7 +825,7 @@ Diese Relation wird verwendet, wenn durch (Morphem-)koordination der Teil eines 
   <p style="color:white;">Du belegst Käse- und Wurstbrötchen.</p>
 </div>
 
-- Bei komplexeren Koordinationen verweisen alle koordinierten Wörter (**Information**, **Prozess**) auf das Wort, dass den weggelassenen Wortteil enthält (**Applikationsarchitekturen**). Weitere gemeinsame Relationen wie in dem Beispiel **Object being trasnformed** verweisen nur auf das "vollständige" Wort (**Applikationsarchitekturen**)
+- Bei komplexeren Koordinationen verweisen alle koordinierten Wörter (**Information**, **Prozess**) auf das Wort, dass den weggelassenen Wortteil enthält (**Applikationsarchitekturen**). Weitere gemeinsame Relationen wie in dem Beispiel **Object being transformed** verweisen nur auf das "vollständige" Wort (**Applikationsarchitekturen**)
 <div style="text-align:center;">
   <img src="./images/i65_1.PNG" style="height:80px;">
   <p style="color:white;">Entwicklung von Informations-, Prozess und Applikationsarchitekturen</p>
@@ -855,7 +855,7 @@ Diese Relation wird verwendet, wenn durch (Morphem-)koordination der Teil eines 
   <p style="color:white;">Aufgaben im Bereich Marketing</p>
 </div><br>
 
-- Präpositionen werden i.d.R. nicht mit annotiert. Die Bedeutung dieser Wörter werden über Relationen abgebildet. Eine Ausnahme bilden Attribute mit Nullrelation (Siehe [Attribut](#Attribut)).
+- Präpositionen werden i.d.R. nicht mit annotiert. Die Bedeutung dieser Wörter wird über Relationen abgebildet. Eine Ausnahme bilden Attribute mit Nullrelation (Siehe [Attribut](#Attribut)).
 <div style="text-align:center;">
   <img src="./images/i77_praeposition.PNG" style="height:50px;">
   <p style="color:white;">Du erstellst Werkzeuge für unsere Fertigungsmaschinen</p>
@@ -938,8 +938,8 @@ In einigen Fällen sind Entitäten ohne weitere Kontextinformationen völlig unv
 </div><br>
 
 ### Verkettungen und Span-Längen
-- Außer Attitüden stehen Entitätstypen in der Regel nicht alleine. Vereinzelt kommen Arbeitsinhalte und Prozesse auch alleine vor (siehe [taks](#task)).
-- Reihenfolge der Relationen: Es kann manchmal mehrere Möglichkeiten geben, mehrere Relationen miteinander zu verketten. Für uns gilt: Wenn Möglich erst auf Prozess mappen, ansonsten auf Arbeitsinhalt. 
+- Außer Attitüden stehen Entitätstypen in der Regel nicht allein. Vereinzelt kommen Arbeitsinhalte und Prozesse auch allein vor (siehe [taks](#task)).
+- Reihenfolge der Relationen: Es kann manchmal mehrere Möglichkeiten geben, mehrere Relationen miteinander zu verketten. Für uns gilt: Wenn möglich erst auf Prozess mappen, ansonsten auf Arbeitsinhalt. 
 <div style="text-align:center;">
   <img src="./images/kenntnisse_programmieren_python.png" style="height:50px;">
   <p style="color:white;">Kenntnisse im Programmieren von Python</p>
@@ -954,7 +954,7 @@ In einigen Fällen sind Entitäten ohne weitere Kontextinformationen völlig unv
 
 
 ## Sonstiges
-- Bildsprache wird nicht mit annotiert, es sei denn es handelt sich um eine Attitüde (z.B.  einen kühlen Kopf bewahren/ unterschiedliche Dinge im Blick behalten). Im folgenden Beispiel werden nicht der Prozess **knacken** und der Arbeitsinhalt **Nüsse** annotiert, sondern die gesamte Phrase als Attitüde. Anders wäre der Fall gelagert, wenn das Knacken von harten Nüssen eindeutig Teil der Tätigkeitenbeschreibung wäre.
+- Bildsprache wird nicht mit annotiert, es sei denn es handelt sich um eine Attitüde (z.B.  einen kühlen Kopf bewahren/ unterschiedliche Dinge im Blick behalten). Im folgenden Beispiel werden nicht der Prozess **knacken** und der Arbeitsinhalt **Nüsse** annotiert, sondern die gesamte Phrase als Attitüde. Anders wäre der Fall gelagert, wenn das Knacken von harten Nüssen eindeutig wortwörtlich Teil der Arbeitsaufgaben wäre.
 
 <div style="text-align:center;">
   <img src="./images/i81_3.PNG" style="height:50px;">
