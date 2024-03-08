@@ -542,7 +542,8 @@ Eine **formale Qualifikation** wird normalerweise von einer Institution wie eine
 
 ## Task
 
-- Es gibt Fälle, bei denen Tasks formuliert sind, diese sich aber nicht in Prozess und Arbeitsinhalt aufteilen lassen. In solchen Fällen können Prozesse/Arbeitsinhalte auch alleinstehen bzw. mit der Nullrelation an andere Entitäten gekoppelt sein. Arbeitsinhalt ist hierbei oft so eine Art Kompetenzbereich. Um in solchen Fällen AI von Prozessen abzugrenzen, greift hier die Faustregel: Kann ich die Span als Task weiter inhaltlich klassifizieren (z.B.: physische/manuelle, intellektuelle/kognitive, soziale Task)? Ist dies der Fall, liegt ein Prozess vor analog zum Vorgehen bei inhaltslosen [Prozessen](#Prozess). Ist dies nicht der Fall, liegt ein AI vor. In den Beispielen unten z.B. lässt sich "Bädertechnik" nicht weiter klassifizieren, da nicht klar ist, ob manuelle oder kognitive oder sonstige Tasks hiermit verbunden werden. *Lagerung* und *Reinigung* deuten jedoch auf Prozesse hin.
+- Es gibt Fälle, bei denen Tasks formuliert sind, diese sich aber nicht in Prozess und Arbeitsinhalt aufteilen lassen. In solchen Fällen können Prozesse/Arbeitsinhalte auch alleinstehen bzw. mit der Nullrelation an andere Entitäten gekoppelt sein. Arbeitsinhalt ist hierbei oft so eine Art Kompetenzbereich. Um in solchen Fällen AI von Prozessen abzugrenzen, greift hier die Faustregel: Kann ich die Span als Task weiter inhaltlich klassifizieren (z.B.: physische/manuelle, intellektuelle/kognitive, soziale Task)? Ist dies der Fall, liegt ein Prozess vor analog zum Vorgehen bei inhaltslosen [Prozessen](#Prozess). Ist dies nicht der Fall, liegt ein AI vor. In den Beispielen unten z.B. lässt sich "Bädertechnik" nicht weiter klassifizieren, da nicht klar ist, ob manuelle oder kognitive oder sonstige Tasks hiermit verbunden werden. Im Gegensatz dazu deutet *Lagerung* auf einen Prozess hin, wobei *Ausgang* nicht das ist, was gelagert wird (expliziter wäre die Formulierung z.B. so: "Sie lagern Ware für den Ausgang"). Daher wird *Ausgang* als [Attribut](#Attribut) annotiert.
+
 <div style="text-align:center;">
   <img src="./images/baedertechnik.png" style="height:50px;">
   <!-- <p style="color:white;">Bädertechnik</p> -->
@@ -552,10 +553,6 @@ Eine **formale Qualifikation** wird normalerweise von einer Institution wie eine
 <div style="text-align:center;">
   <img src="./images/ausgangslagerung.png" style="height:50px;">
   <!-- <p style="color:white;">Ausgangslagerung</p> -->
-</div><br>
-<div style="text-align:center;">
-  <img src="./images/bauendreinigung.png" style="height:50px;">
-  <!-- <p style="color:white;">Bauendreinigung</p> -->
 </div><br>
 
 # Relationstypen
