@@ -77,6 +77,16 @@ Ein **Prozess** beschreibt die zu verrichtende Handlung oder Abfolge von Schritt
   <!-- <p style="color:white;">Mitverantwortung für die Koordination und Absprache aller Arbeitsabläufe im Team</p> -->
 </div>
 
+- Teilweise gibt es logische Verkettungen/Abfolgen von Prozessen. Diese werden jedoch nicht miteinander verkettet.
+<div style="text-align:center;">
+  <img src="./images/120a.png" style="height:50px;">
+  <!-- <p style="color:white;">Ermittlung der Kenndaten zur Feststellung der Art der Hörbeeinträchtigung</p> -->
+</div>
+<div style="text-align:center;">
+  <img src="./images/120b.png" style="height:50px;">
+  <!-- <p style="color:white;">Förderung der Lebenszufriedenheit der Bewohner durch eine individuelle und aktivierende Pflege und Betreuung</p> -->
+</div>
+
 <ul> <li> Beinhaltet ein Satz/eine Phrase einen inhaltsleeren Prozess, wie <i>durchführen</i> oder <i>arbeiten</i>, wird dieser nicht annotiert, wenn sich aus dem eigentlichen Arbeitsinhalt des Satzes ein Prozess ableiten lässt. Dies ist der Fall, wenn sich aus dem Wort ein Verb ableiten lässt, dass sich in die gängigen Taskkategorie, wie z.B. manuell/kognitiv, einsortieren lässt. Anderenfalls handelt es sich um einen Arbeitsinhalt und der inhaltslose Prozess ist mitzuannotieren, damit die Relationen <b>Arbeitsmittel</b> bzw. <b>object_being_transformed</b> gezogen werden können. </li>
 
 <div style="text-align:center;">
@@ -122,6 +132,14 @@ Ein **Prozess** beschreibt die zu verrichtende Handlung oder Abfolge von Schritt
   <!-- <p style="color:white;">Sie arbeiten mit Excel</p> -->
 </div> 
 
+<li>
+  Ebenfalls muss das inhaltslose Wort <i>Durchführen</i> annotiert werden, wenn noch andere Prozesse auf den gleichen Arbeitsinhalt referenzieren und sonst nicht klar wird, dass der Task auch durchzuführen ist. 
+<div style="text-align:center;">
+  <img src="./images/123.png" style="height:75px;">
+  <!-- <p style="color:white;">Planung, Durchführung und Dokumentation der Pflege</p> -->
+</div> 
+  
+</li>
 </ul></ul>
 
 - Prozessverben können in manchen Fällen durch abgetrennte Präfixe auf mehrere Wörter verteilt sein. In diesen Fällen werden alle Wörter als Prozess markiert und entsprechend über die Relation **zusammengehörige Entitätsteile** verbunden.
@@ -256,6 +274,19 @@ Die ersten drei Sätze sind Beispiele für *"an was" oder "mit bzw. an wem"* wir
 </div>
 
 Im obigen Beispiel wird **Wareneingang** als Arbeitsinhalt annotiert, weil es sich auf die konkrete Stelle bezieht, wohingegen **Gartenpflege** als Attribut annotiert wird, weil es sich auf den Beruf und nicht unbedingt die konkrete Stelle bezieht.
+
+- In Ausnahmefällen können Attribute und Arbeitsinhalte zusammengefasst werden, wenn der Arbeitsinhalte ansonsten keinen oder kaum Inhalt tragen würde. In unten stehendem Beipiel ist *Techniken* viel zu allgemein. Erst durch die Verbindung mit *mikroskopische* wird ersichtlich, welche Fähigkeiten damit verbunden sind. 
+<div style="text-align:center;">
+  <img src="./images/112.png" style="height:50px;">
+  <!-- <p style="color:white;">Kenntnisse über mikroskopische Techniken</p> -->
+</div>
+
+- Sobald in einem Wort ein Prozess und ein Arbeitsinhalt genannt ist, wird versucht diese separat zu annotieren. Im folgenden Beispiel wäre es daher falsch das gesammte Wort *Kontaktpflege* als Prozess anzusehen.
+<div style="text-align:center;">
+  <img src="./images/114.png" style="height:75px;">
+  <!-- <p style="color:white;">Kontaktpflege und Informationsaustausch mit den Angehörigen unserer KundenInnen</p> -->
+</div>
+
 </details>
 
 ## Attribut
@@ -287,12 +318,18 @@ Ein **Attribut** spezifiziert eine andere Entität näher.
   <!-- <p style="color:white;">Sägen von Holz für unsere Kunden im Bereich Holzverarbeitung mit Schwerpunkt Möbelbau</p> -->
 </div><br>
 
-
 - Bei Attributen mit Nullrelation werden Präpositionen (falls vorhanden) mit annotiert, um den Sinn zu erhalten. Im nachfolgenden Beispiel das Wort **für**.
 <div style="text-align:center;">
   <img src="./images/ent_attribut_02.gif" style="height:50px;">
   <!-- <p style="color:white;">Du entwirfst Werbeanzeigen für ausgewählte Produkte</p> -->
 </div><br>
+
+- Attribute binden in der Regel nur auf eine Entität. In diesem Falll auf den Prozess *Austausch*, auch wenn man in diesem Fall davon ausgehen kann, dass die Kontaktpflege ebenfalls mit den Angehörigen stattfindet.
+<div style="text-align:center;">
+  <img src="./images/114.png" style="height:75px;">
+  <!-- <p style="color:white;">Kontaktpflege und Informationsaustausch mit den Angehörigen unserer KundenInnen</p> -->
+</div><br>
+
 </details>
 
 ## Erfahrungsniveau
@@ -315,7 +352,7 @@ Das **Erfahrungsniveau** gibt an, welche Art von Erfahrung ein potenzieller Arbe
   <!-- <p style="color:white;">Berufserfahrung als Ingenieur</p> -->
 </div><br>
 
-- Das Erfahrungsniveau wird typischerweise über Nomen (Kenntnisse, Erfahrung, Interesse) oder Verben (können, verstehen, wollen) ausgedrückt.
+- Das Erfahrungsniveau wird typischerweise über Nomen (z.B. Kenntnisse, Erfahrung) oder Verben (z.B. können, verstehen) ausgedrückt.
   <div style="text-align:center;">
   <img src="./images/ent_erfahrungsniveau_03.png" style="height:80px;">
   <!-- <p style="color:white;">Sie können bereits Blut abnehmen?</p> -->
@@ -355,6 +392,12 @@ Eine **Attitüde** bezieht sich auf die geistige Ausrichtung, Haltung, Einstellu
 </div>
 
 <details><summary>Erläuterungen</summary>
+  
+- Verstärker von Attitüden wie z.B. *sehr gute*, *gute*, *hohe* werden als Attribut annotiert.
+<div style="text-align:center;">
+  <img src="./images/115.png" style="height:60px;">
+  <!-- <p style="color:white;">gute Auffassungsgabe</p> -->
+</div>
 
 -  Arbeiten im Team wird dagegen nicht als Attitüde annotiert, da es sich eher um einen Arbeitsumstand als um eine Attitüde handelt
   <div style="text-align:center;">
@@ -394,10 +437,22 @@ Eine **Attitüde** bezieht sich auf die geistige Ausrichtung, Haltung, Einstellu
   <!-- <p style="color:white;">Ihre Aufgaben: Bereitschaftsdienst</p> -->
 </div>
 
+- Belastbarkeit ist eine Attitüde. Die jeweilige Art der Belastbarkeit (im Beispiel *körperliche*) wird als Attribut annotiert
+<div style="text-align:center;">
+  <img src="./images/117a.png" style="height:50px;">
+  <!-- <p style="color:white;">Körperliche Belastbarkeit</p> -->
+</div>
+
 - Verständnis drückt oft eine Attitüde aus, wobei das Adjektiv essenziell ist, um die Attitüde klassifizieren zu können. Es wird daher nicht als Attribut verstanden, sondern als Teil der Attitüde mitannotiert.  
 
 <div style="text-align:center;">
-  <img src="./images/technisches_verstaendnis.png" style="height:80px;">
+  <img src="./images/technisches_verstaendnis.png" style="height:50px;">
+  <!-- <p style="color:white;">technisches Verständnis</p> -->
+</div>
+
+- Interesse an einer Task (Prozess + Arbeitsinhalt) ist eine Attitüde
+<div style="text-align:center;">
+  <img src="./images/117b.png" style="height:50px;">
   <!-- <p style="color:white;">technisches Verständnis</p> -->
 </div>
 
@@ -485,6 +540,10 @@ Häufig findet sich diese Information in der Unternehmensbeschreibung.
 <div style="text-align:center;">
   <img src="./images/ent_branche_05.png" style="height:100px;">
   <!-- <p style="color:white;">In unserem Logistikunternehmen bist du zuständig für ... Wir sind ein Unternehmen in der Logistikbranche und suchen Speditionskaufleute</p> -->
+<div style="text-align:center;">
+  <img src="./images/116.png" style="height:50px;">
+  <!-- <p style="color:white;">Architekturbüro</p> -->
+  
 </div><br>
 
 - Eigennamen, wie beispielsweise Namen von Organisationen, werden nicht als Branche annotiert, auch wenn man daraus den Wirtschaftszweig lesen könnte.
@@ -536,6 +595,12 @@ Eine **formale Qualifikation** wird normalerweise von einer Institution wie eine
 <div style="text-align:center;">
   <img src="./images/i46_4.PNG" style="height:50px;">
   <!-- <p style="color:white;">Führerschein</p> -->
+</div>
+
+- Wenn eine genaue Führerscheinklasse angegeben ist, ist diese als Attribtut zu annotieren. Wäre ausschließlich PKW genannt, wäre dieser als Attribut zu annotieren. Es sei denn, aus der Anzeige geht eindeutig hervor, dass es sich bei dem PKW um ein Arbeitsmittel handelt (z.B. bei einem ambulaten Pflegedienst)
+<div style="text-align:center;">
+  <img src="./images/113.png" style="height:50px;">
+  <!-- <p style="color:white;">Fahrerlaubnis B PKW/Kleinbusse (alt: FS 3)</p> -->
 </div>
 
 </details>
@@ -679,6 +744,13 @@ Die **Fachrichtung** zeigt an, dass eine Entität, häufig ein **Attribut**, ein
   <!-- <p style="color:white;">Ausbildung zum Informatiker mit Schwerpunkt Systemintegration. abgeschlossene kaufmännische Ausbildung.</p> -->
 </div><br>
 
+- Wörter, die Teil einer Fachrichtung sind, werden zusammen annotiert
+<div style="text-align:center;">
+  <img src="./images/118.png" style="height:50px;">
+  <!-- <p style="color:white;">Gärtner (Garten- und Landschaftsbau).</p> -->
+</div><br>
+
+
 - Bei Formulierungen wie _vergleichbare Ausbildung_ ist _vergleichbar_ die Fachrichtung 
 
 <div style="text-align:center;">
@@ -777,6 +849,10 @@ Die **Negation**-Relation wird verwendet, wenn ein Prozess oder ein Arbeitsinhal
 <div style="text-align:center;">
   <img src="./images/rel_negation_02.png" style="height:80px;">
  <!-- <p style="color:white;">Erfahrung in der Wärmepumpeninstallation nicht notwendig.</p> -->
+</div>
+<div style="text-align:center;">
+  <img src="./images/122.png" style="height:50px;">
+ <!-- <p style="color:white;">Reisebereitschaft nicht erforderlich</p> -->
 </div>
 
 - Negationen können auch positiv formuliert sein.
@@ -1029,7 +1105,7 @@ Hier werden Beispiele eingefügt, die wir im Laufe derzeit sammeln, weil wir den
 </div><br>
 
 <div style="text-align:center;">
-  <img src="./images/projektmanagement.png" style="height:50px;">
+  <img src="./images/projektmanagement.png" style="height:70px;">
   <!-- <p style="color:white;">Projektmanagement</p> -->
 </div><br> 
 
@@ -1054,8 +1130,23 @@ Hier werden Beispiele eingefügt, die wir im Laufe derzeit sammeln, weil wir den
 </div><br> 
 
 <div style="text-align:center;">
-  <img src="./images/Versorgung_Menschen_Demenz.PNG" style="height:50px;">
+  <img src="./images/Versorgung_Menschen_Demenz.PNG" style="height:40px;">
   <!-- <p style="color:white;">Idealerweise Erfahrung in der Versorgung von Menschen mit Demenz</p> -->
+</div>
+
+<div style="text-align:center;">
+  <img src="./images/121.png" style="height:75px;">
+  <!-- <p style="color:white;">Englischsprachige Newsgroups und Knowledgebase-Artikeln können Sie ohne Schwierigkeiten folgen.</p> -->
+</div>
+
+<div style="text-align:center;">
+  <img src="./images/124.png" style="height:50px;">
+  <!-- <p style="color:white;">Keine Führungsverantwortung</p> -->
+</div>
+
+<div style="text-align:center;">
+  <img src="./images/125.png" style="height:40px;">
+  <!-- <p style="color:white;">Keine Führungsverantwortung</p> -->
 </div>
 
 
