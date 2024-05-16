@@ -1126,7 +1126,7 @@ Hier werden Beispiele eingefügt, die wir im Laufe derzeit sammeln, weil wir den
 
 <div style="text-align:center;">
   <img src="./images/125.png" style="height:40px;">
-  <p style="color:white;">Keine Führungsverantwortung</p>
+  <p style="color:white;">Sie sind zuständig für die buchhalterische Unterstützung des Unternehmens</p>
 </div>
 
 
