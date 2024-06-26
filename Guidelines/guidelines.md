@@ -1076,7 +1076,7 @@ Während der Annotation sollen folgende Fragen eine Hilfestellung bieten, um Ent
 | Arbeitsinhalt          | Mit wem, womit bzw. woran wird gearbeitet?      |
 | Attribut               | Wird eine Entität mit einer Zusatzinformation näher beschrieben?      |
 | Erfahrungsniveau       | Welche Art der Vorkenntnisse (inkl. Interesse) braucht man?|   
-| Attitüde               | Welche Eigenschaften braucht man für den Job? |
+| Attitüde               | Welche Eigenschaften braucht eine Person für den Job (z.B. Selbstständigkeit, Höhentauglichkeit)? |
 | Berufsbezeichnung      | Wie heißt der gesuchte Beruf/die Stelle/Ausbildung laut Ausschreibung?|
 | Branche                | In welchem Wirtschaftszweig operiert der Betrieb, bei dem die Stelle ausgeübt wird?|
 | Formale Qualifikation  | Welche Art von Zertifikat ist gefordert?|
