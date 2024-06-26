@@ -448,7 +448,7 @@ Eine **Attitüde** bezieht sich auf die geistige Ausrichtung, Haltung, Einstellu
 - Interesse an einer Task (Prozess + Arbeitsinhalt) ist eine Attitüde
 <div style="text-align:center;">
   <img src="./images/117b.png" style="height:50px;">
-  <p style="color:white;">technisches Verständnis</p>
+  <p style="color:white;">Interesse am Umgang mit Kindern</p>
 </div>
 
 
